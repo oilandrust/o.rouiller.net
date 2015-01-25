@@ -25,7 +25,7 @@ def test():
         abort("Aborting at user request.")
 
 def commit():
-    local("git add -p && git commit")
+    local("git add -p && git commit", capture=False)
 
 def push():
     local("git push")
