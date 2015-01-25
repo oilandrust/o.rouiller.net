@@ -1,7 +1,7 @@
 from __future__ import with_statement
 from fabric.api import *
 from fabric.contrib.console import confirm
-
+from fabric.api import local, warn_only
 from fabric.network import ssh
 
 PRODUCTION_HOST = "ubuntu@ec2-54-154-123-179.eu-west-1.compute.amazonaws.com"
@@ -25,7 +25,8 @@ def test():
         abort("Aborting at user request.")
 
 def commit():
-    local("git add -p && git commit", capture=False)
+    with settings(warn_only=True):
+        local("git add -p && git commit", capture=False)
 
 def push():
     local("git push")
