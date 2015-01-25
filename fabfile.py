@@ -14,6 +14,8 @@ env.key_filename = ["orouiller.net.pem"]
 env.use_shell = True
 env.port = 22
 
+def connect():
+    local("ssh -i orouiller.net.pem ubuntu@ec2-54-154-123-179.eu-west-1.compute.amazonaws.com")
 
 def test_alive():
     run("ls")
@@ -31,7 +33,7 @@ def commit():
 def push():
     local("git push")
     
-def prepare_deploy():
+def prepare():
     test()
     commit()
     push()
