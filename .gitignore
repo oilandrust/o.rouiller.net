@@ -46,10 +46,14 @@ coverage.xml
 
 # Django stuff:
 *.log
-orouiller/settings/__init__.py
 
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
+
+
+# Project specific stuffs
+orouiller/settings/__init__.py
+admin/

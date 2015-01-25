@@ -6,16 +6,14 @@ from fabric.network import ssh
 
 PRODUCTION_HOST = "ubuntu@ec2-54-154-123-179.eu-west-1.compute.amazonaws.com"
 
-# ssh -i orouiller.net.pem ubuntu@c2-54-154-123-179.eu-west-1.compute.amazonaws.com
-
 #production
 env.hosts = [PRODUCTION_HOST]
-env.key_filename = ["orouiller.net.pem"]
+env.key_filename = ["admin/orouiller.net.pem"]
 env.use_shell = True
 env.port = 22
 
 def connect():
-    local("ssh -i orouiller.net.pem ubuntu@ec2-54-154-123-179.eu-west-1.compute.amazonaws.com")
+    local("ssh -i admin/orouiller.net.pem ubuntu@ec2-54-154-123-179.eu-west-1.compute.amazonaws.com")
 
 def test_alive():
     run("ls")
