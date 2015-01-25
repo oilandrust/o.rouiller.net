@@ -1,3 +1,3 @@
-from orouiller.settings.base import *
+from orouiller.settings.common import *
 
-DEBUG = True
+DEBUG = False
