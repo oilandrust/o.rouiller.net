@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def home(request):
-    return HttpResponse("This is my personal page.")
+def home(request):  
+    return render(request, 'orouiller/home.html', {})

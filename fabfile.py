@@ -43,5 +43,7 @@ def deploy():
 
     with cd(code_dir):
         run('git pull')
+        with prefix('workon orouiller'):
+            run('python manage.py migrate')
         run("sudo service apache2 reload")
         
