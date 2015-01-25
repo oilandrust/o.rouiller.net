@@ -46,6 +46,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+orouiller/settings/__init__.py
 
 # Sphinx documentation
 docs/_build/
