@@ -43,5 +43,7 @@ def deploy():
         run('git pull')
         with prefix('workon orouiller'):
             run('python manage.py migrate')
+            run('echo "yes\n" python manage.py collectstatic')
+            run('sudo cp -r static/ /var/www/orouiller.net/')
         run("sudo service apache2 reload")
         
