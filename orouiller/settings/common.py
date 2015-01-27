@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'orouiller',
     'projects',
+    'django_markdown',      
 )
 
 MIDDLEWARE_CLASSES = (

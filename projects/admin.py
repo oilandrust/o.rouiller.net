@@ -1,7 +1,8 @@
 from django.contrib import admin
 from projects import models
+from django_markdown.admin import MarkdownModelAdmin
 
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(MarkdownModelAdmin):
     list_display = ('name','date')
     prepopulated_fields = {'slug':('name',)}
 

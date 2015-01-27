@@ -7,13 +7,18 @@ class ProjectQuerySet(models.QuerySet):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True)
-    description = models.TextField()
+    
+    short_description = models.TextField()
+
+    
+    
     published = models.BooleanField(default=True)
     date = models.DateField()
     type = models.CharField(max_length=50)
     thumbnail = models.ImageField(blank=True)
     link = models.URLField(blank=True)
+
+    slug = models.SlugField(max_length=200, unique=True)
 
     objects = ProjectQuerySet.as_manager()
 
