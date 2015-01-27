@@ -10,6 +10,7 @@ body {
   padding-left: 15px;
 }
 
+
 .tittle {
     font-size: medium;
 }
@@ -19,6 +20,13 @@ body {
 
 .intro {
     font-size: meium;
+}
+
+.project{
+  padding-top: 19px;
+  padding-bottom: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
 /* Custom page footer */
