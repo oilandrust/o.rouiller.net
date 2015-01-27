@@ -4,5 +4,6 @@
 {% load django_markdown %}
 
 {% block content %}
+		<h1>{{object.name}}</h1>
 		{{object.description|markdown}}
 {% endblock %}
