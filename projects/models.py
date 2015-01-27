@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django_markdown.models import MarkdownField
 
 class ProjectQuerySet(models.QuerySet):
     def published(self):
@@ -9,11 +10,11 @@ class Project(models.Model):
     name = models.CharField(max_length=200)
     
     short_description = models.TextField()
-
+    description = MarkdownField(blank=True)
     
     
     published = models.BooleanField(default=True)
-    date = models.DateField()
+    date = models.DateField(blank=True)
     type = models.CharField(max_length=50)
     thumbnail = models.ImageField(blank=True)
     link = models.URLField(blank=True)
