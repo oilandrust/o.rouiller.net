@@ -2,76 +2,129 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>orouiller</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>orouiller</title>
 
-		<link href="{% static 'orouiller/css/bootstrap.min.css' %}" rel="stylesheet">
-	</head>
+	<link href="{% static 'orouiller/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
 
-	<body>
-		<div class="container">
-<nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">A programmer's page</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-           </ul>
-         </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
+<body>
+<div class="container">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">A programmer's page</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</nav>
 
 
 	<div class="jumbotron">
-	        <h1>Hi there!</h1>
-        	<p class="lead">
-		This is my humble homepage where I concatenate my projects, things I care about and want to show.
+		<h1>Hi there!</h1>
+		<p class="lead">
+			This is my humble homepage where I concatenate my projects, things I care about and want to show.
 		</p>
-      	</div>	
+	</div>
 
 	<div class="row">
-	<h2>Projects</h2>
 
-<div class="container">
-<ul class="media-list">
-  <li class="media">
-    <div class="media-left">
-      <a href="#">
-	      <img class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
-      </a>
-    </div>
-    <div class="media-body">
-	    <h4 class="media-heading">Hubbas</h4>
-    	    Hubbas is a location-based social app for skateboarders. It let them find skate spots. I worked full time on this project for a little bit more than 6 month.
-	    Although I don't really see myself as an entrepreneur, I actually tried to make it work, to get users and funding. My dream was to employ a few people and to have a mini-ramp in our office. :)
-	    It didn't work that way but I learned a lot, it was my first experience with web and mobile and also I discovered the startup world.
-	    
-    </div>
-    </div>
-    </div>
-  </li>
-</ul>
+		<h2>Projects</h2>
+		<div class="container">
+			<ul class="media-list">
+				<li class="media">
+					<div class="media-left">
+						<a href="http://www.hubbas.co/">
+							<img width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
+						</a>
+					</div>
+					<div class="media-body">
+						<a href="http://www.hubbas.co/">
+							<h4 class="media-heading">Hubbas</h4>
+						</a>
+						Hubbas is a location-based social app for skateboarders. It let them find skate spots. I worked full time on this project for a little bit more than 6 month.
+						Although I don't really see myself as an entrepreneur, I actually tried to make it work, to get users and funding. My dream was to employ a few people and to have a mini-ramp in our office. :)
+						It didn't work that way but I learned a lot, it was my first experience with web and mobile and also I discovered the startup world.
 
-	</div>	
- 
+					</div>
+				</li>
+			</ul>
+		</div>
 
-	</body>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static 'orouiller/js/bootstrap.min.js' %} "></script>
+		<div class="container">
+			<ul class="media-list">
+				<li class="media">
+					<div class="media-left">
+						<a href="/projects/implicit/">
+							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
+						</a>
+					</div>
+					<div class="media-body">
+						<a href="http://www.hubbas.co/">
+							<h4 class="media-heading">Modeling and Ray-Tracing Skeletal Implicit Surfaces on the GPU</h4>
+						</a>
+						My Master Project dealt with skeletal implicit surfaces and how to model them so that we are able to raytrace them on the GPU.
+						The question I was asking and trying to answer was: Can we implement a full rendering pipeline using skeletal implicit surfaces with ray tracing?
+						How convenient is 3D modeling, can we animate the models easily? What about texturing?
+						My demo showed that it was possible to do all of this quite conveniently but the caveat remains performance.
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+		<h2>Publications</h2>
+		<div class="container">
+			<ul class="media-list">
+				<li class="media">
+					<div class="media-left">
+						<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6606796">
+							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
+						</a>
+					</div>
+					<div class="media-body">
+						<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6606796">
+							<h4 class="media-heading">3D Printing Spatialy Varying BRDFs</h4>
+						</a>
+						My first publication as first author, it doesn't mean I had all the ideas, it means that I did most of the work.
+
+					</div>
+				</li>
+				<li class="media">
+					<div class="media-left">
+						<a href="#">
+							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Robust Delaunay Triangulation on or close to the Sphere.</h4>
+						I implemented this project during my intership at INRIA Sophia Antipolis.
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
+	</div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'orouiller/js/bootstrap.min.js' %} "></script>
 
 </html>

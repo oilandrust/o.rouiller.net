@@ -57,3 +57,5 @@ target/
 # Project specific stuffs
 orouiller/settings/__init__.py
 admin/
+.idea/
+orouiller/db.sqlite3
