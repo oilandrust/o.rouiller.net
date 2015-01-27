@@ -12,8 +12,8 @@
 	<div class="row">
 		<h2>Projects</h2>
 		
-		{% for project in projects %}
 		<div class="container">
+		{% for project in projects %}
 			<ul class="media-list">
 				<li class="media">
 					<div class="media-left">
@@ -24,68 +24,37 @@
 						</a>
 					</div>
 					<div class="media-body">
-						<a href="http://www.hubbas.co/">
-								<h4 class="media-heading">{{project.name}}</h4>
+						<a href="{{project.link}}">
+							<h4 class="media-heading">{{project.name}}</h4>
 						</a>
 						{{project.description}}
 					</div>
 				</li>
 			</ul>
-		</div>
 		{% endfor %}
-
-		<div class="container">
-			<ul class="media-list">
-				<li class="media">
-					<div class="media-left">
-						<a href="/projects/implicit/">
-							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
-						</a>
-					</div>
-					<div class="media-body">
-						<a href="http://www.hubbas.co/">
-							<h4 class="media-heading">Modeling and Ray-Tracing Skeletal Implicit Surfaces on the GPU</h4>
-						</a>
-						My Master Project dealt with skeletal implicit surfaces and how to model them so that we are able to raytrace them on the GPU.
-						The question I was asking and trying to answer was: Can we implement a full rendering pipeline using skeletal implicit surfaces with ray tracing?
-						How convenient is 3D modeling, can we animate the models easily? What about texturing?
-						My demo showed that it was possible to do all of this quite conveniently but the caveat remains performance.
-					</div>
-				</li>
-			</ul>
 		</div>
-
 
 		<h2>Publications</h2>
 		<div class="container">
+			{% for project in publications %}
 			<ul class="media-list">
 				<li class="media">
 					<div class="media-left">
-						<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6606796">
-							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
+						<a href="{{project.link}}">
+							{% if project.thumbnail %}
+							<img width="100" height="100" class="media-object" src="{{ project.thumbnail.url }}" >
+							{% endif %}
 						</a>
 					</div>
 					<div class="media-body">
-						<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6606796">
-							<h4 class="media-heading">3D Printing Spatialy Varying BRDFs</h4>
+						<a href="{{project.link}}">
+							<h4 class="media-heading">{{project.name}}</h4>
 						</a>
-						My first publication as first author, it doesn't mean I had all the ideas, it means that I did most of the work.
-
+						{{project.description}}
 					</div>
 				</li>
-				<li class="media">
-					<div class="media-left">
-						<a href="#">
-							<img  width="100" height="100" class="media-object" src="{% static 'orouiller/img/logo_hubbas.png'%}" >
-						</a>
-					</div>
-					<div class="media-body">
-						<h4 class="media-heading">Robust Delaunay Triangulation on or close to the Sphere.</h4>
-						I implemented this project during my intership at INRIA Sophia Antipolis.
-					</div>
-				</li>
-
 			</ul>
+			{% endfor %}
 		</div>
 	</div>
 {% endblock %}

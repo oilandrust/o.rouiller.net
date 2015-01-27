@@ -3,9 +3,11 @@ from projects.models import Project
 
 def home(request):  
 
-    projects = Project.objects.all()
+    projects = Project.objects.exclude(type='publication')
+    publications = Project.objects.filter(type='publication')
 
     return render(request, 'orouiller/home.html', 
                             {
-                                'projects':projects
+                                'projects':projects,
+                                'publications':publications,
                             })
