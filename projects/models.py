@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.urlresolvers import reverse
 
 class ProjectQuerySet(models.QuerySet):
     def published(self):
@@ -19,6 +19,15 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+    
+    @property
+    def page_url(self):
+        return self.get_absolute_url()
+
+    def get_absolute_url(self):
+        if self.link:
+            return self.link
+        return reverse('project_detail', kwargs={"slug":self.slug})
 
     class Meta:
         verbose_name = "Project"

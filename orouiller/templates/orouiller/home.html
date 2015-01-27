@@ -23,14 +23,14 @@
 			<ul class="media-list">
 				<li class="media project">
 					<div class="media-left">
-						<a href="{{project.link}}">
+						<a href="{{project.page_url}}">
 							{% if project.thumbnail %}
 							<img width="100" height="100" class="media-object" src="{{ project.thumbnail.url }}" >
 							{% endif %}
 						</a>
 					</div>
 					<div class="media-body">
-						<a href="{{project.link}}">
+						<a href="{{project.page_url}}">
 							<h4 class="media-heading">{{project.name}}</h4>
 						</a>
 						{{project.description}}
@@ -46,14 +46,14 @@
 			<ul class="media-list project">
 				<li class="media">
 					<div class="media-left">
-						<a href="{{project.link}}">
+						<a href="{{project.page_url}}">
 							{% if project.thumbnail %}
 							<img width="100" height="100" class="media-object" src="{{ project.thumbnail.url }}" >
 							{% endif %}
 						</a>
 					</div>
 					<div class="media-body">
-						<a href="{{project.link}}">
+						<a href="{{project.page_url}}">
 							<h4 class="media-heading">{{project.name}}</h4>
 						</a>
 						{{project.description}}
