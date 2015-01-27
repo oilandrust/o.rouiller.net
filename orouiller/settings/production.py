@@ -1,7 +1,7 @@
 from orouiller.settings.common import *
 import os
 
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['orouiller.net','www.orouiller.net']
