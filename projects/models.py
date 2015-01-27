@@ -12,6 +12,8 @@ class Project(models.Model):
     published = models.BooleanField(default=True)
     date = models.DateField()
     type = models.CharField(max_length=50)
+    thumbnail = models.ImageField(blank=True)
+    link = models.URLField(blank=True)
 
     objects = ProjectQuerySet.as_manager()
 
