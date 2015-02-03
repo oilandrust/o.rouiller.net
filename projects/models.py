@@ -10,7 +10,7 @@ class Project(models.Model):
     name = models.CharField(max_length=200)
     subtitle = models.CharField(blank=True, max_length=1000)
     
-    short_description = models.TextField()
+    short_description = models.TextField(blank=True)
     description = MarkdownField(blank=True)
     
     
@@ -18,7 +18,7 @@ class Project(models.Model):
     old = models.BooleanField(default=False)
     
     date = models.DateField(blank=True)
-    type = models.CharField(max_length=50)
+    type = models.CharField(blank=True, max_length=50)
     thumbnail = models.ImageField(blank=True)
     link = models.URLField(blank=True)
 
