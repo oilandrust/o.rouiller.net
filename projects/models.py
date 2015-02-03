@@ -8,6 +8,7 @@ class ProjectQuerySet(models.QuerySet):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
+    subtitle = models.CharField(blank=True, max_length=1000)
     
     short_description = models.TextField()
     description = MarkdownField(blank=True)
