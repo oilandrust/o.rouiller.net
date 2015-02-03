@@ -62,5 +62,29 @@
 			</ul>
 			{% endfor %}
 		</div>
+
+		<h3>Older and smaller projects</h3>
+		<div class="container">
+			{% for project in old_projects	%}
+			<ul class="media-list project">
+				<li class="media">
+					<div class="media-left">
+						<a href="{{project.page_url}}">
+							{% if project.thumbnail %}
+							<img width="50" height="50" class="media-object" src="{{ project.thumbnail.url }}" >
+							{% endif %}
+						</a>
+					</div>
+					<div class="media-body">
+						<a href="{{project.page_url}}">
+							<h4 class="media-heading">{{project.name}}</h4>
+						</a>
+						{{project.short_description}}
+					</div>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+
 	</div>
 {% endblock %}

@@ -14,6 +14,8 @@ class Project(models.Model):
     
     
     published = models.BooleanField(default=True)
+    old = models.BooleanField(default=False)
+    
     date = models.DateField(blank=True)
     type = models.CharField(max_length=50)
     thumbnail = models.ImageField(blank=True)
