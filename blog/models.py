@@ -19,6 +19,8 @@ class Image(models.Model):
     def get_absloute_url(self):
         return image.url
 
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
 
