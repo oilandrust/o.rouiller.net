@@ -10,3 +10,4 @@ class PostAdmin(MarkdownModelAdmin):
 
 admin.site.register(models.Post, PostAdmin)
 admin.site.register(models.Tag)
+admin.site.register(models.Image)
