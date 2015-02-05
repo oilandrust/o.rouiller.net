@@ -1,4 +1,6 @@
 Django==1.7.3
+django-markdown==0.8.4
+Markdown==2.5.2
 mercurial==3.0.1.post20140606
 pbr==0.10.7
 pygame==1.9.2a0
