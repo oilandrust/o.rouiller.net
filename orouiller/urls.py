@@ -7,6 +7,7 @@ from django.conf import settings
 
 urlpatterns = patterns('',
    
+    url(r'^blog/', include('blog.urls')),
     url(r'^projects/', include('projects.urls')),
     url(r'^$', 'orouiller.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),

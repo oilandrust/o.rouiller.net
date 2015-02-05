@@ -1,0 +1,9 @@
+
+{% extends "orouiller/base.html" %}
+{% load staticfiles %}
+{% load django_markdown %}
+
+{% block content %}
+		<h1>{{object.name}}</h1>
+		{{object.content|markdown}}
+{% endblock %}
