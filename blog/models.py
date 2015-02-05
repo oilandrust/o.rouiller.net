@@ -12,6 +12,13 @@ class Tag(models.Model):
     def __str__(self):
         return self.slug
 
+class Image(models.Model):
+    image = models.ImageField()
+
+    def get_absloute_url(self):
+        return image.url
+
+
 class Post(models.Model):
 
     title = models.CharField(max_length=200)
