@@ -16,7 +16,7 @@ class Image(models.Model):
     image = models.ImageField()
     name = models.CharField(blank=True, max_length=200)
 
-    def get_absloute_url(self):
+    def get_absolute_url(self):
         return self.image.url
 
     def __str__(self):
