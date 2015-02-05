@@ -17,7 +17,7 @@ class Image(models.Model):
     name = models.CharField(blank=True, max_length=200)
 
     def get_absloute_url(self):
-        return image.url
+        return self.image.url
 
     def __str__(self):
         return self.name
