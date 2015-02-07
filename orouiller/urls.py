@@ -13,7 +13,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^markdown/', include('django_markdown.urls')),
 
-    url(r'^tinder-safari/', include('safari.urls')),
 
     url(r'^accounts/login/$', 'django.contrib.auth.views.login',
        {'template_name': 'safari/login.html'}),

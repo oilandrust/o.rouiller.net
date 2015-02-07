@@ -36,7 +36,6 @@ INSTALLED_APPS = (
     'orouiller',
     'projects',
     'blog',
-    'safari',
 )
 
 MIDDLEWARE_CLASSES = (
