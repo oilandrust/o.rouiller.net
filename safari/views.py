@@ -12,7 +12,7 @@ class LoginRequiredMixin(object):
 class TinderImages(LoginRequiredMixin, generic.ListView):
     queryset = TinderImage.objects.all()
     template_name = 'safari/safari.html'
-    paginate_by = 10
+    paginate_by = 50
 
 
 from django import forms
