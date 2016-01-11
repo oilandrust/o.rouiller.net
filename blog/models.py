@@ -2,6 +2,8 @@ from django.db import models
 from django_markdown.models import MarkdownField
 from django.core.urlresolvers import reverse
 
+from projects.models import Project
+
 class PostQuerySet(models.QuerySet):
     def published(self):
         return self.filter(published=True)
@@ -25,8 +27,8 @@ class Image(models.Model):
 class Post(models.Model):
 
     title = models.CharField(max_length=200)
-    content = MarkdownField(blank = True)   
-    
+    content = MarkdownField(blank = True)
+
     slug = models.SlugField(max_length=200, unique=True)
     published = models.BooleanField(default = True)
 
@@ -35,6 +37,7 @@ class Post(models.Model):
 
     objects = PostQuerySet.as_manager()
 
+    project = models.ForeignKey(Project, null = True)
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):
