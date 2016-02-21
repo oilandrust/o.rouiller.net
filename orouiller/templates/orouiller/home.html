@@ -23,7 +23,8 @@
 		<h2>Projects</h2>
 
 		<div class="container">
-		{% for project in projects %}
+		  {% for project in projects %}
+		       {% if project.published %}
 			<ul class="media-list">
 				<li class="media project">
 					<div class="media-left">
@@ -42,6 +43,7 @@
 					</div>
 				</li>
 			</ul>
+			{% endif %}
 		{% endfor %}
 		</div>
 
